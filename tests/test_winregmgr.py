@@ -1,0 +1,34 @@
+import unittest
+from winregmgr_pkg.winreg_manager import OpenKey
+import winreg
+
+KEY = winreg.HKEY_CURRENT_USER
+SUB_KEY = r"SOFTWARE\\"
+PARAMETER = "Test_parameter"
+VALUE = "Test Value"
+
+class TestReadWriteDelete(unittest.TestCase):
+    def test1_create(self):
+        with OpenKey(KEY, SUB_KEY) as reg_key:
+            reg_key.set_value(PARAMETER, VALUE)
+        self.assertEqual(True, True)
+
+    def test2_read(self):
+        with OpenKey(KEY, SUB_KEY) as reg_key:
+            value, reg_type = reg_key.get_value(PARAMETER)
+            self.assertEqual(value, VALUE)
+            self.assertEqual(reg_type, 1)
+
+    def test3_delete(self):
+        with OpenKey(KEY, SUB_KEY) as reg_key:
+            reg_key.delete_key(PARAMETER)
+
+        try:
+            with OpenKey(KEY, SUB_KEY) as reg_key:
+                _, _ = reg_key.get_value(PARAMETER)
+        except FileNotFoundError:
+            self.assertEqual(True, True)
+
+
+if __name__ == '__main__':
+    unittest.main()
