@@ -1,0 +1,6 @@
+/build/
+/dist/
+/winregmgr.egg-info/
+/winregmgr_pkg_egor_wexler.egg-info/
+/.idea/
+**/__pycache__/
