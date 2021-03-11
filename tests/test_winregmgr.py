@@ -1,5 +1,5 @@
 import unittest
-from winregmgr_pkg.winreg_manager import OpenKey
+from winregmgr.winreg_manager import OpenKey
 import winreg
 
 KEY = winreg.HKEY_CURRENT_USER
