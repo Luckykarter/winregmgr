@@ -32,7 +32,7 @@ class TestReadWriteDelete(unittest.TestCase):
 
     def test5_delete(self):
         with OpenKey(KEY, SUB_KEY) as reg_key:
-            reg_key.delete_key(PARAMETER)
+            reg_key.delete_value(PARAMETER)
 
         try:
             with OpenKey(KEY, SUB_KEY) as reg_key:

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="winregmgr",
-    version="0.0.3",
+    version="0.0.4",
     author="Egor Wexler",
     author_email="egor.wexler@icloud.com",
     description="Context manager for Windows Registry manipulations",

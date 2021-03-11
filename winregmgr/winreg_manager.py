@@ -31,7 +31,7 @@ class OpenKey:
         value, regtype = winreg.QueryValueEx(self.registry_key, name)
         return value, regtype
 
-    def delete_key(self, name):
+    def delete_value(self, name):
         winreg.DeleteValue(self.registry_key, name)
 
     def get_values(self):
