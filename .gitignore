@@ -3,3 +3,4 @@
 /winregmgr.egg-info/
 /.idea/
 **/__pycache__/
+scratch.py
