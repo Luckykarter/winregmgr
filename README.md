@@ -12,7 +12,7 @@ $ pip install winregmgr
 ## Usage Samples:
 
 ```Python
-from winregmgr.winreg_manager import OpenKey
+from winregmgr import OpenKey
 import winreg   # for accessing constants
 
 # Read parameter from Registry:
