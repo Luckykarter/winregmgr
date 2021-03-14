@@ -1,13 +1,12 @@
 # winregmgr
-[![PyPI](https://img.shields.io/badge/testpypi-v.0.0.7-brightgreen)](https://test.pypi.org/project/winregmgr/)
+[![PyPI](https://img.shields.io/pypi/v/winregmgr)](https://test.pypi.org/project/winregmgr/)
 
 Helper library that allows to read/write from/to Windows Registry via simplified syntax of Python contextmanager.
 
 ## Install:
 
-Meanwhile published on test.pypi
 ```bash  
-$ pip install -i https://test.pypi.org/simple/ winregmgr
+$ pip install winregmgr
 ```  
 
 ## Usage Samples:
